@@ -113,12 +113,16 @@ def predict(packet_filename):
     prediction = [[src_ip, dst_ip, labels[prediction]] for src_ip, dst_ip, prediction in zip(src, dst, predicted_labels)]
 
     # Print the predicted labels
-    info = ''
-    i = 1
-    for key, value in data_dict.items():
-        if i % 2 == 0:
-            info += key + ' : ' + str(value) + '\n '
-        else:
-            info += key + ':' + str(value) + ', '
-        i += 1
-    return info, prediction
+    infos = []
+
+    for data_dict in data_list:
+        i = 1
+        info = ''
+        for key, value in data_dict.items():
+            if i % 2 == 0:
+                info += key + ' : ' + str(value) + '\n '
+            else:
+                info += key + ':' + str(value) + ', '
+            i += 1
+        infos.append(info)
+    return infos, prediction

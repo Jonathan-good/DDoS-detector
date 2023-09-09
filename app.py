@@ -113,7 +113,7 @@ def complete_analysis(data_list, prediction):
     progress_bar.stop()  # Stop the indeterminate progress bar
     progress_bar.pack_forget()
     result_label.config(text=prediction)
-    filename_label.config(text=str(data_list)[:-1])
+    filename_label.config(text=str(data_list)[:, :-1])
     select_button.pack(pady=10)
     start_button.pack()
 
