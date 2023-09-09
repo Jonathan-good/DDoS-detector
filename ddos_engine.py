@@ -110,5 +110,15 @@ def predict(packet_filename):
     # Predict using the loaded model
     predicted_labels = loaded_model.predict(scaled_new_df)
 
+    prediction = [[src_ip, dst_ip, labels[prediction]] for src_ip, dst_ip, prediction in zip(src, dst, predicted_labels)]
+
     # Print the predicted labels
-    return [[src_ip, dst_ip, labels[prediction]] for src_ip, dst_ip, prediction in zip(src, dst, predicted_labels)]
+    info = ''
+    i = 1
+    for key, value in data_dict.items():
+        if i % 2 == 0:
+            info += key + ' : ' + str(value) + '\n '
+        else:
+            info += key + ':' + str(value) + ', '
+        i += 1
+    return info, prediction
