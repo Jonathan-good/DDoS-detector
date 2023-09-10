@@ -130,6 +130,9 @@ def complete_analysis(data_lists, prediction):
     pred_txt += f"\nTotal: {malicious} Malicious, {benign} Benign\n"
     result_label.config(text=pred_txt)
 
+    if not os.path.exists("details"):
+        os.makedirs("details")
+    
     with open(f"details/{os.path.split(selected_file)[1]}_details.txt", 'w') as file:
         txt = f"Total: {malicious} Malicious, {benign} Benign\n\n"
         for i, data_list in enumerate(data_lists):
