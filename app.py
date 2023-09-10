@@ -2,7 +2,7 @@ import threading
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import ttk
-
+import os
 from PIL import Image, ImageTk
 
 from ddos_engine import predict
@@ -18,6 +18,7 @@ global start_button
 global selected_file
 global select_button
 global filename_label
+global details_label
 
 
 #  display the start page
@@ -28,15 +29,16 @@ def show_start_page():
     global result_label
     global select_button
     global filename_label
+    global details_label
 
     # Create the start page
     start_screen = tk.Tk()
-    start_screen.title("Foreign Language")
-    start_screen.geometry("500x600")
+    start_screen.title("DDoS Detector")
+    start_screen.geometry("700x800")
 
     # Add image to the top of the screen
     start_image = Image.open("logo.png")
-    start_image = start_image.resize((150, 150))
+    start_image = start_image.resize((200, 150))
     start_photo = ImageTk.PhotoImage(start_image)
     start_image_label = tk.Label(start_screen, image=start_photo)
     start_image_label.image = start_photo
@@ -79,6 +81,7 @@ def select_file():
     global selected_file
     global result_label
     global filename_label
+    global details_label
     result_label.config(text="")
     filename_label.config(text="")
     selected_file = filedialog.askopenfilename()
@@ -93,6 +96,7 @@ def start_analysis():
     global result_label
     global select_button
     global start_button
+    global details_label
 
     if selected_file:
         result_label.config(text="Sending request")
@@ -105,19 +109,35 @@ def start_analysis():
 
 
 # Change the labels and hide the progress bar after completed the analysis
-def complete_analysis(data_list, prediction):
+def complete_analysis(data_lists, prediction):
     global progress_bar
     global result_label
     global select_button
+    global details_label
+    global selected_file
     global start_button
     progress_bar.stop()  # Stop the indeterminate progress bar
     progress_bar.pack_forget()
     pred_txt = ""
-    for i in prediction:
-        pred_txt += f"The packet from {i[0]} to {i[1]} is {i[2]}\n"
+    malicious = 0
+    benign = 0
+    for i, each in enumerate(prediction):
+        pred_txt += f"The packet {i + 1} from {each[0]} to {each[1]} is {each[2]}\n"
+        if each[2] == "NOT a DDOS attack":
+            benign += 1
+        else:
+            malicious += 1
+    pred_txt += f"\nTotal: {malicious} Malicious, {benign} Benign\n"
     result_label.config(text=pred_txt)
-    # result_list = np.array(data_list)[:, :-1] if np.array(data_list).ndim >= 2 else np.array(data_list)
-    filename_label.config(text=str(data_list)[:-1])
+
+    with open(f"details/{os.path.split(selected_file)[1]}_details.txt", 'w') as file:
+        txt = f"Total: {malicious} Malicious, {benign} Benign\n\n"
+        for i, data_list in enumerate(data_lists):
+            txt += f"packet {i + 1}:\n " + data_list + f"\n{prediction[i][2]}" + "\n\n"
+        file.write(txt)
+
+    filename_label.config(text=f"Details saved to details/{os.path.split(selected_file)[1]}_details.txt")
+
     select_button.pack(pady=10)
     start_button.pack()
 

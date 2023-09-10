@@ -95,7 +95,7 @@ def predict(packet_filename):
     original_feature_names = loaded_scaler.feature_names_in_
     #     # Now, 'df' contains the extracted fields in the same order as your desired DataFrame
     #     print(df)
-    labels = ["The request is NOT a DDOS attack", "The request is likely a DDOS attack"]
+    labels = ["NOT a DDOS attack", "likely a DDOS attack"]
     X = df.drop(['dt', 'src', 'dst'], axis=1)
 
     # Rearrange the columns in 'X' to match the original feature order
