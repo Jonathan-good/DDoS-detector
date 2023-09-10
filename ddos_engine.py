@@ -8,8 +8,8 @@ warnings.filterwarnings("ignore")
 
 
 def load_model():
-    model_filename = 'random_forest_model.pkl'
-    scaler_filename = 'standard_scaler.pkl'
+    model_filename = 'models/random_forest_model.pkl'
+    scaler_filename = 'models/standard_scaler.pkl'
     # load
     with open(model_filename, 'rb') as f:
         loaded_model = pickle.load(f)
