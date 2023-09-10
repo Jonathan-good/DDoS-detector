@@ -1,11 +1,17 @@
 # DDoS Detector
-**note**: This project is still under development.
+
+## Known Issues
+The DDoS Detector UI is currently NOT working on Mac OS with M series processors. This is due to the known incompatibility between the M-series chip and the Tkinter library.
+
+However, the application can still save the details of results in the `details` folder. 
 
 ## Overview
 
 This user-friendly tkinter application allows users to upload pcap (packet capture) files and analyze them using an AI-based DDoS (Distributed Denial of Service) detector. By leveraging machine learning and network analysis techniques, this tool helps identify potential DDoS attacks.
 
 The jupyter notebook `DDoS_Detector.ipynb` contains the code for the machine learning model and some visualizations analyzing the dataset. The `app.py` file contains the code for the tkinter application. The `create_test_case.py` file contains the code for creating custom packets.
+
+**note**: This project is still under development.
 
 ## Features
 
