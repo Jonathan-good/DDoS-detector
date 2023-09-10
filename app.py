@@ -112,8 +112,12 @@ def complete_analysis(data_list, prediction):
     global start_button
     progress_bar.stop()  # Stop the indeterminate progress bar
     progress_bar.pack_forget()
-    result_label.config(text=prediction)
-    filename_label.config(text=str(data_list)[:, :-1])
+    pred_txt = ""
+    for i in prediction:
+        pred_txt += f"The packet from {i[0]} to {i[1]} is {i[2]}\n"
+    result_label.config(text=pred_txt)
+    # result_list = np.array(data_list)[:, :-1] if np.array(data_list).ndim >= 2 else np.array(data_list)
+    filename_label.config(text=str(data_list)[:-1])
     select_button.pack(pady=10)
     start_button.pack()
 
