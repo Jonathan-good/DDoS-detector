@@ -1,8 +1,11 @@
 # DDoS Detector
+**note**: This project is still under development.
 
 ## Overview
 
 This user-friendly tkinter application allows users to upload pcap (packet capture) files and analyze them using an AI-based DDoS (Distributed Denial of Service) detector. By leveraging machine learning and network analysis techniques, this tool helps identify potential DDoS attacks.
+
+The jupyter notebook `DDoS_Detector.ipynb` contains the code for the machine learning model and some visualizations analyzing the dataset. The `app.py` file contains the code for the tkinter application. The `create_test_case.py` file contains the code for creating custom packets.
 
 ## Features
 
@@ -49,3 +52,7 @@ This user-friendly tkinter application allows users to upload pcap (packet captu
 ## About the Developer
 
 - I am a passionate cybersecurity enthusiast with a mission to utilize the power of artificial intelligence (AI) to safeguard the digital world from illegal hacking activities. I aspire to contribute to a safer, more secure digital planet. By implementing AI solutions and continuously expanding my knowledge, I am dedicated to playing a part in defending our interconnected world from cyber adversaries. Together, we can shape a more resilient and protected future online.
+
+## Credits
+
+Dataset: https://www.kaggle.com/datasets/aikenkazin/ddos-sdn-dataset
