@@ -136,7 +136,7 @@ def complete_analysis(data_lists, prediction):
     with open(f"details/{os.path.split(selected_file)[1]}_details.txt", 'w') as file:
         txt = f"Total: {malicious} Malicious, {benign} Benign\n\n"
         for i, data_list in enumerate(data_lists):
-            txt += f"packet {i + 1}:\n " + data_list + f"The packet {i + 1} from {prediction[i][0]} to {prediction[i][1]} is {prediction[i][2]}" + "\n\n\n"
+            txt += f"packet {i + 1}:\n " + data_list + f"\nThe packet {i + 1} from {prediction[i][0]} to {prediction[i][1]} is {prediction[i][2]}" + "\n\n\n\n"
         file.write(txt)
 
     filename_label.config(text=f"Details saved to details/{os.path.split(selected_file)[1]}_details.txt")
