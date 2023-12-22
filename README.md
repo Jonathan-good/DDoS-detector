@@ -1,9 +1,16 @@
 # DDoS Detector
 
 ## Known Issues
-The DDoS Detector UI is currently NOT working on Mac OS with M series processors. This is due to the known incompatibility between the M-series chip and the Tkinter library.
 
-However, the application can still save the details of results in the `details` folder. 
+Wireshark2.py has lots of false positives. It's not a good model. 
+
+Maybe there is some issue with my code, or with the original dataset.
+
+If it's the case, then we need to find a better dataset or use reinforcement learning.
+
+Webserver.py is the webserver model. It implements a simple webserver and a simple client. The client sends a request to the webserver, and the webserver responds.
+
+The webserver implements the trained model to detect DDoS attacks.
 
 ## Overview
 
