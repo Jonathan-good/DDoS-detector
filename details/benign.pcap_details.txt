@@ -1,0 +1,146 @@
+Total: 0 Malicious, 9 Benign
+
+packet 1:
+ dt:11605, switch : 1
+ src:10.0.0.1, dst : 10.0.0.8
+ pktcount:126395, bytecount : 134737070
+ dur:280.0, dur_nsec : 734000000
+ tot_dur:280999985152.0, flows : 2
+ packetins:1943, pktperflow : 13531
+ byteperflow:14424046, pktrate : 451
+ Pairflow:0, Protocol_ICMP : 0
+ Protocol_TCP:0, Protocol_UDP : 1
+ port_no:4, tx_bytes : 3842
+ rx_bytes:3520, tx_kbps : 0
+ rx_kbps:0, tot_kbps : 0
+ The packet 1 from 10.0.0.1 to 10.0.0.8 is NOT a DDOS attack
+
+
+packet 2:
+ dt:11425, switch : 1
+ src:10.0.0.2, dst : 10.0.0.8
+ pktcount:90333, bytecount : 96294978
+ dur:200.0, dur_nsec : 744000000
+ tot_dur:200999993344.0, flows : 3
+ packetins:1943, pktperflow : 13534
+ byteperflow:14427244, pktrate : 451
+ Pairflow:0, Protocol_ICMP : 0
+ Protocol_TCP:0, Protocol_UDP : 1
+ port_no:1, tx_bytes : 3795
+ rx_bytes:1242, tx_kbps : 0
+ rx_kbps:0, tot_kbps : 0
+ The packet 2 from 10.0.0.2 to 10.0.0.8 is NOT a DDOS attack
+
+
+packet 3:
+ dt:11425, switch : 1
+ src:10.0.0.2, dst : 10.0.0.8
+ pktcount:90333, bytecount : 96294978
+ dur:200.0, dur_nsec : 744000000
+ tot_dur:200999993344.0, flows : 3
+ packetins:1943, pktperflow : 13534
+ byteperflow:14427244, pktrate : 451
+ Pairflow:0, Protocol_ICMP : 0
+ Protocol_TCP:0, Protocol_UDP : 1
+ port_no:2, tx_bytes : 3688
+ rx_bytes:1492, tx_kbps : 0
+ rx_kbps:0, tot_kbps : 0
+ The packet 3 from 10.0.0.2 to 10.0.0.8 is NOT a DDOS attack
+
+
+packet 4:
+ dt:11425, switch : 1
+ src:10.0.0.2, dst : 10.0.0.8
+ pktcount:90333, bytecount : 96294978
+ dur:200.0, dur_nsec : 744000000
+ tot_dur:200999993344.0, flows : 3
+ packetins:1943, pktperflow : 13534
+ byteperflow:14427244, pktrate : 451
+ Pairflow:0, Protocol_ICMP : 0
+ Protocol_TCP:0, Protocol_UDP : 1
+ port_no:3, tx_bytes : 3413
+ rx_bytes:3665, tx_kbps : 0
+ rx_kbps:0, tot_kbps : 0
+ The packet 4 from 10.0.0.2 to 10.0.0.8 is NOT a DDOS attack
+
+
+packet 5:
+ dt:11425, switch : 1
+ src:10.0.0.2, dst : 10.0.0.8
+ pktcount:90333, bytecount : 96294978
+ dur:200.0, dur_nsec : 744000000
+ tot_dur:200999993344.0, flows : 3
+ packetins:1943, pktperflow : 13534
+ byteperflow:14427244, pktrate : 451
+ Pairflow:0, Protocol_ICMP : 0
+ Protocol_TCP:0, Protocol_UDP : 1
+ port_no:1, tx_bytes : 3795
+ rx_bytes:1402, tx_kbps : 0
+ rx_kbps:0, tot_kbps : 0
+ The packet 5 from 10.0.0.2 to 10.0.0.8 is NOT a DDOS attack
+
+
+packet 6:
+ dt:11425, switch : 1
+ src:10.0.0.1, dst : 10.0.0.8
+ pktcount:45304, bytecount : 48294064
+ dur:100.0, dur_nsec : 716000000
+ tot_dur:101000003584.0, flows : 3
+ packetins:1943, pktperflow : 13535
+ byteperflow:14428310, pktrate : 451
+ Pairflow:0, Protocol_ICMP : 0
+ Protocol_TCP:0, Protocol_UDP : 1
+ port_no:4, tx_bytes : 3665
+ rx_bytes:3413, tx_kbps : 0
+ rx_kbps:0, tot_kbps : 0
+ The packet 6 from 10.0.0.1 to 10.0.0.8 is NOT a DDOS attack
+
+
+packet 7:
+ dt:11425, switch : 1
+ src:10.0.0.1, dst : 10.0.0.8
+ pktcount:45304, bytecount : 48294064
+ dur:100.0, dur_nsec : 716000000
+ tot_dur:101000003584.0, flows : 3
+ packetins:1943, pktperflow : 13535
+ byteperflow:14428310, pktrate : 451
+ Pairflow:0, Protocol_ICMP : 0
+ Protocol_TCP:0, Protocol_UDP : 1
+ port_no:1, tx_bytes : 3775
+ rx_bytes:1492, tx_kbps : 0
+ rx_kbps:0, tot_kbps : 0
+ The packet 7 from 10.0.0.1 to 10.0.0.8 is NOT a DDOS attack
+
+
+packet 8:
+ dt:11425, switch : 1
+ src:10.0.0.1, dst : 10.0.0.8
+ pktcount:45304, bytecount : 48294064
+ dur:100.0, dur_nsec : 716000000
+ tot_dur:101000003584.0, flows : 3
+ packetins:1943, pktperflow : 13535
+ byteperflow:14428310, pktrate : 451
+ Pairflow:0, Protocol_ICMP : 0
+ Protocol_TCP:0, Protocol_UDP : 1
+ port_no:2, tx_bytes : 3845
+ rx_bytes:1402, tx_kbps : 0
+ rx_kbps:0, tot_kbps : 0
+ The packet 8 from 10.0.0.1 to 10.0.0.8 is NOT a DDOS attack
+
+
+packet 9:
+ dt:11425, switch : 1
+ src:10.0.0.2, dst : 10.0.0.8
+ pktcount:90333, bytecount : 96294978
+ dur:200.0, dur_nsec : 744000000
+ tot_dur:200999993344.0, flows : 3
+ packetins:1943, pktperflow : 13534
+ byteperflow:14427244, pktrate : 451
+ Pairflow:0, Protocol_ICMP : 0
+ Protocol_TCP:0, Protocol_UDP : 1
+ port_no:4, tx_bytes : 354583059
+ rx_bytes:4295, tx_kbps : 16578
+ rx_kbps:0, tot_kbps : 1182893056
+ The packet 9 from 10.0.0.2 to 10.0.0.8 is NOT a DDOS attack
+
+

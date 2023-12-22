@@ -16,11 +16,6 @@ custom_data = []
 # Ask user to provide the data one by one for the custom packet
 for i in range(number_packets):
     print("Enter the data for the custom packet number " + str(i + 1) + ":")
-    print("Enter the timestamp: ")
-    dt = int(input())
-
-    print("Enter the switch: ")
-    switch = int(input())
 
     print("Enter the source IP(x.x.x.x): ")
     src = input()
@@ -40,25 +35,8 @@ for i in range(number_packets):
     print("Enter the duration of nsec: ")
     dur_nsec = int(input())
 
-    tot_dur = float((dur + dur_nsec / math.pow(10, 9))*math.pow(10, 9))
-
-    print("Enter the number of flows: ")
-    flows = int(input())
-
-    print("Enter the packet ins: ")
-    packetins = int(input())
-
-    print("Enter the packet per flow: ")
-    pktperflow = int(input())
-
-    print("Enter the byte per flow: ")
-    byteperflow = int(input())
-
     print("Enter the packet rate: ")
     pktrate = int(input())
-
-    print("Enter the pair flow: ")
-    Pairflow = int(input())
 
     print("Enter the protocol(UDP/TCP/ICMP): ")
     Protocol = input()
@@ -72,19 +50,8 @@ for i in range(number_packets):
     print("Enter the rx bytes: ")
     rx_bytes = int(input())
 
-    print("Enter the tx kbps: ")
-    tx_kbps = int(input())
-
-    print("Enter the rx kbps: ")
-    rx_kbps = float(input())
-
-    print("Enter the total kbps: ")
-    tot_kbps = float(input())
-
     # Create a custom packet with all the features
-    custom_packet = [dt, switch, src, dst, pktcount, bytecount, dur, dur_nsec, tot_dur, flows, packetins,
-                     pktperflow, byteperflow, pktrate, Pairflow, Protocol, port_no, tx_bytes, rx_bytes, tx_kbps,
-                     rx_kbps, tot_kbps]
+    custom_packet = [src, dst, pktcount, bytecount, dur, dur_nsec, pktrate, Protocol, port_no, tx_bytes, rx_bytes]
 
     custom_data.append(custom_packet)
 
