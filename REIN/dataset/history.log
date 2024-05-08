@@ -1,0 +1,6 @@
+2024-04-19 20:07:16 | dataset_type:DOS2017 | flows (tot,ben,ddos):(0,0,0) | fragments (tot,ben,ddos):(0,0,0) | options:-d ./dataset -f all -n 10 -t DOS2017 -w 5 | process_time:37.68369817733765 |
+2024-04-19 20:29:59 | dataset_type:DOS2017 | flows (tot,ben,ddos):(18313,18313,0) | fragments (tot,ben,ddos):(19677,19677,0) | options:-d ./dataset -f all -n 10 -t DOS2017 -w 5 | process_time:37.14981985092163 |
+2024-04-19 20:34:24 | dataset_type:DOS2019 | flows (tot,ben,ddos):(18313,1221,17092) | fragments (tot,ben,ddos):(19677,2458,17219) | options:-d ./dataset -f all -n 10 -t DOS2019 -w 5 | process_time:36.678688049316406 |
+2024-04-26 18:41:50 | dataset_type:DOS2019 | flows (tot,ben,ddos):(18313,1221,17092) | fragments (tot,ben,ddos):(19677,2458,17219) | options:-d ./dataset -f all -n 10 -t DOS2019 -w 5 | process_time:38.44147491455078 |
+2024-04-26 19:57:00 | dataset_type:DOS2019 | flows (tot,ben,ddos):(18313,1221,17092) | fragments (tot,ben,ddos):(19413,2265,17148) | options:--dataset_type DOS2019 --dataset_folder ./dataset/ --packets_per_flow 10 --dataset_id DOS2019 --traffic_type all --time_window 10 | process_time:37.32535004615784 |
+2024-04-26 20:01:51 | examples (tot,ben,ddos):(4530,2265,2265) | Train/Val/Test sizes: (3660,414,456) | Packets (train,val,test):(16074,1796,1974) | options:--preprocess_folder ./dataset |
