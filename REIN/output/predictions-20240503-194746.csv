@@ -1,0 +1,2 @@
+Model,Time,Packets,Samples,DDOS%,Accuracy,F1Score,TPR,FPR,TNR,FNR,Source
+DOS2019-CNN2024,0.021,1974,456,0.654,0.9079,0.9253,0.9848,0.1979,0.8021,0.0152,10t-10n-DOS2019-dataset-test.hdf5
